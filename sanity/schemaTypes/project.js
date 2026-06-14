@@ -63,6 +63,10 @@ export default defineType({
             title: "Birthday Shoot",
             value: "birthday-shoot",
           },
+          {
+            title: "Bharatanatyam ",
+            value: "bharatanatyam",
+          },
         ],
 
         layout: "dropdown",

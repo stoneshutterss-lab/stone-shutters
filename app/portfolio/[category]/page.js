@@ -30,12 +30,14 @@ export default async function CategoryPage({ params }) {
 
       <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
         <Image
-          src={pageData.heroImage}
-          alt={pageData.heading}
-          fill
-          priority
-          className="object-cover"
-        />
+  src={pageData.heroImage}
+  alt={pageData.heading}
+  fill
+  sizes="100vw"
+  quality={100}
+  priority
+  className="object-cover"
+/>
 
         <div className="absolute inset-0 bg-black/35" />
 
@@ -117,11 +119,13 @@ export default async function CategoryPage({ params }) {
       "
             >
               <Image
-                src={pageData.contentImage}
-                alt={pageData.heading}
-                fill
-                className="object-cover"
-              />
+  src={pageData.contentImage}
+  alt={pageData.heading}
+  fill
+  sizes="(max-width: 1024px) 100vw, 50vw"
+  quality={100}
+  className="object-cover"
+/>
             </div>
           </div>
         </div>

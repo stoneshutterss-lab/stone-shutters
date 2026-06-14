@@ -36,7 +36,7 @@ export default function HomeSubBrands() {
   justify-center
   gap-2
   md:gap-4
-  py-1
+  py-4 md:py-1
               transition-all
               duration-300
               hover:opacity-90
@@ -49,7 +49,7 @@ export default function HomeSubBrands() {
               height={150}
               priority
               className="
-                h-[28px]
+                h-[40px]
                 md:h-[55px]
                 lg:h-[60px]
                 w-auto
@@ -63,7 +63,7 @@ export default function HomeSubBrands() {
             <h3
               className="
                 text-[#D4A14A]
-                text-[8px]
+                text-[11px]
                 md:text-[12px]
                 lg:text-[18px]
                 text-center
@@ -89,7 +89,7 @@ export default function HomeSubBrands() {
   justify-center
   gap-2
   md:gap-4
-  py-1
+  py-4 md:py-1
               transition-all
               duration-300
               hover:opacity-90
@@ -102,7 +102,7 @@ export default function HomeSubBrands() {
               height={150}
               priority
               className="
-                h-[28px]
+                h-[40px]
                 md:h-[55px]
                 lg:h-[60px]
                 w-auto
@@ -116,7 +116,7 @@ export default function HomeSubBrands() {
             <h3
               className="
                 text-[#D4A14A]
-                text-[8px]
+                text-[11px]
                 md:text-[12px]
                 lg:text-[18px]
                 text-center

@@ -36,6 +36,12 @@ const portfolioData = [
     image: "/portfolio/birthday.png",
     slug: "birthday-shoot",
   },
+  {
+    id: 7,
+    title: "Bharatanatyam ",
+    image: "/portfolio/Bharatanatyam.png",
+    slug: "bharatanatyam",
+  },
 ];
 
 export default portfolioData;

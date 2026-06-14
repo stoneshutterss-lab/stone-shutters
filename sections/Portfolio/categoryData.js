@@ -107,6 +107,23 @@ Every birthday is a milestone worth remembering. From children's celebrations to
 Our photographs transform joyful occasions into timeless memories that can be cherished for years.
 `,
   },
+    bharatanatyam: {
+    heading: "Bharatanatyam & Arangetram Photography",
+
+    subtitle: "Celebrating Classical Excellence With",
+
+    highlight: "Grace & Heritage",
+
+    heroImage: "/category-pages/bharatanatyam-hero.png",
+
+    contentImage: "/category-pages/bharatanatyam-content.png",
+
+    description: `
+An Arangetram is a significant milestone in a dancer's journey, symbolizing years of dedication, discipline, and passion for Bharatanatyam. We capture every expressive movement, traditional costume, and memorable stage performance with artistic precision.
+
+From emotional family moments to captivating dance sequences, our photography preserves the beauty, culture, and achievement of this special occasion, creating timeless memories that will be treasured for generations.
+`,
+  },
 };
 
 export default categoryData;
