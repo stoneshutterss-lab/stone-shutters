@@ -15,6 +15,13 @@ export default defineType({
     }),
 
     defineField({
+  name: "tagLine",
+  title: "Tag Line",
+  type: "string",
+  description: "A short subtitle displayed below the child name.",
+}),
+
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",

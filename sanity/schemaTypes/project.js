@@ -17,6 +17,13 @@ export default defineType({
     }),
 
     defineField({
+  name: "tagLine",
+  title: "Tag Line",
+  type: "string",
+  description: "A short subtitle displayed below the project name.",
+}),
+
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -76,6 +83,16 @@ export default defineType({
     }),
 
     defineField({
+  name: "coverImage",
+  title: "Cover Image",
+  type: "image",
+  options: {
+    hotspot: true,
+  },
+  validation: (Rule) => Rule.required(),
+}),
+
+    defineField({
       name: "galleryImages",
       title: "Gallery Images",
       type: "array",
@@ -108,12 +125,14 @@ export default defineType({
     select: {
       title: "projectName",
       subtitle: "category",
+      media: "coverImage",
     },
 
-    prepare({ title, subtitle }) {
+    prepare({ title, subtitle, media }) {
       return {
         title,
         subtitle,
+        media,
       };
     },
   },

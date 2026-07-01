@@ -2,27 +2,19 @@
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import categoryData from "@/sections/Portfolio/categoryData";
-import CategoryGallery from "@/sections/Portfolio/CategoryGallery";
-
-const query = `
-*[_type == "project" && category == $category]{
-  _id,
-  projectName,
-  category,
-  galleryImages
-}
-`;
+import PortfolioProjectGrid from "@/sections/Portfolio/PortfolioProjectGrid";
+import { categoryImagesQuery } from "@/sanity/lib/queries";
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;
 
   const pageData = categoryData[category];
 
-  const projects = await client.fetch(query, {
-    category,
-  });
+  const projects = await client.fetch(categoryImagesQuery, {
+  category,
+});
 
-  const allImages = projects.flatMap((project) => project.galleryImages || []);
+  
 
   return (
     <main className="bg-white">
@@ -135,9 +127,12 @@ export default async function CategoryPage({ params }) {
 
       <section className="pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12">
-          {allImages.length > 0 ? (
-            <CategoryGallery images={allImages} />
-          ) : (
+          {projects.length > 0 ? (
+  <PortfolioProjectGrid
+    projects={projects}
+    category={category}
+  />
+) : (
             <div
               className="
           flex

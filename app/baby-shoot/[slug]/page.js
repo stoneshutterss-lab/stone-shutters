@@ -10,6 +10,7 @@ const query = `
 *[_type == "babyProject" && slug.current == $slug][0]{
   _id,
   childName,
+  tagLine,
   coverImage,
   galleryImages
 }
@@ -36,7 +37,11 @@ export default async function BabyShootDetailsPage({ params }) {
 
       <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
         <Image
-          src={urlFor(project.coverImage).width(1800).url()}
+          src={urlFor(project.coverImage)
+  .width(1800)
+  .height(1000)
+  .fit("crop")
+  .url()}
           alt={project.childName}
           fill
           priority
@@ -45,16 +50,27 @@ export default async function BabyShootDetailsPage({ params }) {
 
         <div className="absolute inset-0 bg-black/35" />
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1
-            className="text-white text-4xl md:text-6xl lg:text-7xl text-center"
-            style={{
-              fontFamily: "Cormorant Garamond",
-            }}
-          >
-            {project.childName}
-          </h1>
-        </div>
+       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+  <h1
+    className="text-white text-4xl md:text-6xl lg:text-7xl"
+    style={{
+      fontFamily: "Cormorant Garamond",
+    }}
+  >
+    {project.childName}
+  </h1>
+
+  {project.tagLine && (
+    <p
+      className="mt-4 text-white/90 text-lg md:text-2xl italic"
+      style={{
+        fontFamily: "Cormorant Garamond",
+      }}
+    >
+      {project.tagLine}
+    </p>
+  )}
+</div>
       </section>
 
       {/* INTRO */}

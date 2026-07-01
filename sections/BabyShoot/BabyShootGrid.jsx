@@ -9,6 +9,7 @@ const query = `
 *[_type == "babyProject"] | order(publishedAt desc){
   _id,
   childName,
+  tagLine,
   "slug": slug.current,
   coverImage
 }
@@ -57,21 +58,40 @@ export default async function BabyShootGrid() {
                   "
                 />
 
-                {/* Child Name */}
+                {/* Child Name & Tag Line */}
 
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3
                     className="
-                      text-white
-                      text-3xl
-                      md:text-4xl
-                    "
+      text-white
+      text-3xl
+      md:text-4xl
+      leading-tight
+    "
                     style={{
                       fontFamily: "Cormorant Garamond",
                     }}
                   >
                     {project.childName}
                   </h3>
+
+                  {project.tagLine && (
+                    <p
+                      className="
+        mt-2
+        text-white/90
+        text-sm
+        md:text-lg
+        italic
+        leading-relaxed
+      "
+                      style={{
+                        fontFamily: "Cormorant Garamond",
+                      }}
+                    >
+                      {project.tagLine}
+                    </p>
+                  )}
                 </div>
               </div>
             </Link>
