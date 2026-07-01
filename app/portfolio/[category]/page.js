@@ -18,28 +18,6 @@ export default async function CategoryPage({ params }) {
 
   return (
     <main className="bg-white">
-      {/* HERO */}
-
-      <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
-        <Image
-  src={pageData.heroImage}
-  alt={pageData.heading}
-  fill
-  sizes="100vw"
-  quality={100}
-  priority
-  className="object-cover"
-/>
-
-        <div className="absolute inset-0 bg-black/35" />
-
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl text-center">
-            {pageData.heading}
-          </h1>
-        </div>
-      </section>
-
       {/* CONTENT */}
 
       <section className="bg-[#ffffff] py-12 md:py-18">
