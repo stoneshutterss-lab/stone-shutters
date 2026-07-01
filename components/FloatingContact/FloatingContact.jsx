@@ -27,7 +27,7 @@ export default function FloatingContact() {
           {/* Phone */}
 
           <a
-            href="tel:+919876543210"
+            href="tel:+919843553377"
             className="
               w-12 h-12
               md:w-10 md:h-10
@@ -49,7 +49,7 @@ export default function FloatingContact() {
           {/* WhatsApp */}
 
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/message/KPNB2HV2J5VGH1"
             target="_blank"
             rel="noopener noreferrer"
             className="

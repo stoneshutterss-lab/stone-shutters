@@ -74,6 +74,10 @@ export default defineType({
             title: "Bharatanatyam ",
             value: "bharatanatyam",
           },
+          {
+  title: "Modeling Photoshoot",
+  value: "modeling",
+},
         ],
 
         layout: "dropdown",

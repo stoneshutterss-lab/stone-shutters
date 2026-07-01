@@ -13,7 +13,68 @@ import {
 
 const ContactPage = () => {
   const [selectedService, setSelectedService] = useState("Select a service");
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+
+const [formData, setFormData] = useState({
+  fullName: "",
+  phone: "",
+  email: "",
+  startDate: "",
+  endDate: "",
+  location: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const whatsappMessage = `
+New Booking Inquiry
+
+Full Name: ${formData.fullName}
+
+Phone: ${formData.phone}
+
+Email: ${formData.email}
+
+Event Start Date: ${formData.startDate}
+
+Event End Date: ${formData.endDate}
+
+Location: ${formData.location}
+
+Service: ${selectedService}
+
+Additional Details:
+${formData.message}
+`;
+
+  const url = `https://wa.me/919843553377?text=${encodeURIComponent(
+  whatsappMessage
+)}`;
+
+  window.open(url, "_blank");
+
+  setFormData({
+    fullName: "",
+    phone: "",
+    email: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+    message: "",
+  });
+
+  setSelectedService("Select a service");
+};
+
   return (
     <section className="w-full bg-white py-8 md:py-10">
       <div className="container-custom">
@@ -67,9 +128,9 @@ const ContactPage = () => {
                       font-['Inter']
                     "
                   >
-                    Nagamuthu clinic, 21, Thiruvalluvar nagar 1st street kannagi
-                    nagar 60 feet road, PN Rd, opposite New bus stand, Tiruppur,
-                    Tamil Nadu - 641602
+                    21 Thiruvalluvar Nagar East 1st Street, Opposite Nagamuthu
+                    Clinic, Kannagi Nagar 60 Feet Road, PN Road, New Busstand,
+                    Tirupur-641602, Tamil Nadu
                   </p>
                 </div>
               </div>
@@ -149,13 +210,13 @@ const ContactPage = () => {
             <div className="mt-9 mb-8">
               <h4
                 className="
-                  text-[18px]
-                  tracking-[1px]
-                  font-medium
-                  text-[#333]
-                  font-['Poppins']
-                  mb-5
-                "
+      text-[18px]
+      tracking-[1px]
+      font-medium
+      text-[#333]
+      font-['Poppins']
+      mb-5
+    "
               >
                 FOLLOW US
               </h4>
@@ -163,92 +224,104 @@ const ContactPage = () => {
               <div className="flex items-center gap-4 flex-wrap">
                 {/* WhatsApp */}
                 <a
-                  href="#"
+                  href="https://wa.me/message/KPNB2HV2J5VGH1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                   className="
-                    w-[46px]
-                    h-[46px]
-                    rounded-full
-                    flex
-                    items-center
-                    justify-center
-                    bg-white
-                    border
-                    border-[#ececec]
-                    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
-                  "
+        w-[46px]
+        h-[46px]
+        rounded-full
+        flex
+        items-center
+        justify-center
+        bg-white
+        border
+        border-[#ececec]
+        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+      "
                 >
                   <FaWhatsapp className="text-[#25D366]" size={22} />
                 </a>
 
                 {/* Instagram */}
                 <a
-                  href="#"
+                  href="https://www.instagram.com/stoneshutters_weddingstudioz?igsh=MWg1dWt2aHI2dWY0dg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
                   className="
-                    w-[46px]
-                    h-[46px]
-                    rounded-full
-                    flex
-                    items-center
-                    justify-center
-                    bg-white
-                    border
-                    border-[#ececec]
-                    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
-                  "
+        w-[46px]
+        h-[46px]
+        rounded-full
+        flex
+        items-center
+        justify-center
+        bg-white
+        border
+        border-[#ececec]
+        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+      "
                 >
                   <FaInstagram className="text-[#E4405F]" size={20} />
                 </a>
 
                 {/* Facebook */}
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=100064322580503"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
                   className="
-                    w-[46px]
-                    h-[46px]
-                    rounded-full
-                    flex
-                    items-center
-                    justify-center
-                    bg-white
-                    border
-                    border-[#ececec]
-                    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
-                  "
+        w-[46px]
+        h-[46px]
+        rounded-full
+        flex
+        items-center
+        justify-center
+        bg-white
+        border
+        border-[#ececec]
+        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+      "
                 >
                   <FaFacebookF className="text-[#1877F2]" size={18} />
                 </a>
 
                 {/* YouTube */}
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@stoneshutters"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
                   className="
-                    w-[46px]
-                    h-[46px]
-                    rounded-full
-                    flex
-                    items-center
-                    justify-center
-                    bg-white
-                    border
-                    border-[#ececec]
-                    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
-                  "
+        w-[46px]
+        h-[46px]
+        rounded-full
+        flex
+        items-center
+        justify-center
+        bg-white
+        border
+        border-[#ececec]
+        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+      "
                 >
                   <FaYoutube className="text-[#FF0000]" size={22} />
                 </a>
@@ -258,27 +331,27 @@ const ContactPage = () => {
             {/* Map */}
             <div
               className="
-                w-full
-lg:w-[115%]
-h-[260px]
-rounded-[16px]
-overflow-hidden
-border
-border-[#f0f0f0]
-shadow-[0_12px_35px_rgba(0,0,0,0.06)]
-transition-all
-duration-300
-              "
+    w-full
+    lg:w-[115%]
+    h-[260px]
+    rounded-[16px]
+    overflow-hidden
+    border
+    border-[#f0f0f0]
+    shadow-[0_12px_35px_rgba(0,0,0,0.06)]
+    transition-all
+    duration-300
+  "
             >
               <iframe
-                title="map"
-                src="https://www.google.com/maps/embed?pb=!1m18..."
+                title="Stone Shutters Wedding Studioz Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7790927426!2d77.34247307772803!3d11.129823560784798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907e66975fe49%3A0xa66c58d8ff1c20d5!2sSTONE%20SHUTTERS%20WEDDING%20STUDIOZ%20-%20best%20candid%20photography%20studio!5e0!3m2!1sen!2sin!4v1782906002271!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </div>
@@ -329,7 +402,7 @@ duration-300
             </div>
 
             {/* Form */}
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               {/* Full Name */}
               <div>
                 <label
@@ -347,6 +420,9 @@ duration-300
 
                 <input
                   type="text"
+                  name="fullName"
+  value={formData.fullName}
+  onChange={handleChange}
                   placeholder="eg : Barry Allen"
                   className="
                     w-full
@@ -389,6 +465,9 @@ duration-300
 
                   <input
                     type="text"
+                    name="phone"
+  value={formData.phone}
+  onChange={handleChange}
                     placeholder="eg : 1234567890"
                     className="
                       w-full
@@ -428,6 +507,9 @@ duration-300
 
                   <input
                     type="email"
+                    name="email"
+  value={formData.email}
+  onChange={handleChange}
                     placeholder="eg : barry123@gmail.com"
                     className="
                       w-full
@@ -470,6 +552,9 @@ duration-300
 
                   <input
                     type="text"
+                    name="startDate"
+  value={formData.startDate}
+  onChange={handleChange}
                     placeholder="eg : 13/12/2003"
                     className="
                       w-full
@@ -509,6 +594,9 @@ duration-300
 
                   <input
                     type="text"
+                    name="endDate"
+  value={formData.endDate}
+  onChange={handleChange}
                     placeholder="eg : 15/12/2003"
                     className="
                       w-full
@@ -549,6 +637,9 @@ duration-300
 
                 <input
                   type="text"
+                  name="location"
+  value={formData.location}
+  onChange={handleChange}
                   placeholder="eg : Coimbatore"
                   className="
                     w-full
@@ -571,7 +662,6 @@ duration-300
                   "
                 />
               </div>
-
 
               {/* Service */}
               <div>
@@ -657,18 +747,23 @@ duration-300
                   >
                     {[
                       "Wedding Shoot",
+                      "Post & Pre Wedding Shoot",
+                      "Candid",
+                      "Bharatanatyam",
+                      "Baby Shower and Maternity",
                       "Baby Shoot",
                       "Birthday Shoot",
+                      "Puberty",
+                      "Modeling Photoshoot",
                       "Frames",
-                      "Artistic Photoshoot",
                     ].map((service) => (
                       <button
                         key={service}
                         type="button"
                         onClick={() => {
-                          setSelectedService(service);
-                          setIsOpen(false);
-                        }}
+  setSelectedService(service);
+  setIsOpen(false);
+}}
                         className="
             w-full
             text-left
@@ -709,6 +804,9 @@ duration-300
 
                 <textarea
                   rows="4"
+                  name="message"
+  value={formData.message}
+  onChange={handleChange}
                   placeholder="Tell us more about your wedding requirements..."
                   className="
                     w-full

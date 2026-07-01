@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 
 import LayoutWrapper from "@/components/LayoutWrapper";
+import SiteProtection from "@/components/SiteProtection";
 
 
 const cormorant = Cormorant_Garamond({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
     ${poppins.variable}
     ${cormorantSC.variable} min-h-screen flex flex-col bg-white`}
       >
+         <SiteProtection />
         <LayoutWrapper>
           {children}
         </LayoutWrapper>

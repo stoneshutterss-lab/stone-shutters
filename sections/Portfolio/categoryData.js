@@ -55,7 +55,7 @@ Every image reflects real stories and authentic memories that can be cherished f
   },
 
   "baby-shower": {
-    heading: "Baby Shower Photography",
+    heading: "Baby Shower and Maternity Photography",
 
     subtitle: "Celebrating New Beginnings With",
 
@@ -107,7 +107,7 @@ Every birthday is a milestone worth remembering. From children's celebrations to
 Our photographs transform joyful occasions into timeless memories that can be cherished for years.
 `,
   },
-    bharatanatyam: {
+  bharatanatyam: {
     heading: "Bharatanatyam & Arangetram Photography",
 
     subtitle: "Celebrating Classical Excellence With",
@@ -124,6 +124,23 @@ An Arangetram is a significant milestone in a dancer's journey, symbolizing year
 From emotional family moments to captivating dance sequences, our photography preserves the beauty, culture, and achievement of this special occasion, creating timeless memories that will be treasured for generations.
 `,
   },
+  modeling: {
+  heading: "Modeling Photoshoot",
+
+  subtitle: "Showcasing Your Confidence With",
+
+  highlight: "Style & Elegance",
+
+  heroImage: "/category-pages/modeling-hero.png",
+
+  contentImage: "/services/portrait.png",
+
+  description: `
+A professional modeling photoshoot is all about expressing confidence, personality, and style. We create stunning fashion, lifestyle, and portfolio photographs that highlight your individuality with creative direction and premium-quality photography.
+
+Whether you are building your first modeling portfolio, updating your personal brand, or creating content for social media, our team delivers elegant images that leave a lasting impression.
+`,
+},
 };
 
 export default categoryData;

@@ -3,8 +3,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function FrameInquiryModal({ isOpen, onClose, selectedFrame }) {
   const frameOptions = [
@@ -25,22 +24,72 @@ export default function FrameInquiryModal({ isOpen, onClose, selectedFrame }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const [selectedType, setSelectedType] = useState(selectedFrame || "");
+  const [formData, setFormData] = useState({
+  fullName: "",
+  phone: "",
+  location: "",
+  details: "",
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
 
   useEffect(() => {
     setSelectedType(selectedFrame || "");
   }, [selectedFrame]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+    setIsDropdownOpen(false);
+  }
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [isOpen]);
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const whatsappMessage = `Frame Inquiry
+
+Full Name: ${formData.fullName}
+
+Phone Number: ${formData.phone}
+
+Location: ${formData.location}
+
+Frame Type: ${selectedType}
+
+Additional Details:
+${formData.details}`;
+
+  const url = `https://wa.me/919843553377?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
+  window.open(url, "_blank");
+
+  // Clear form
+
+  setFormData({
+    fullName: "",
+    phone: "",
+    location: "",
+    details: "",
+  });
+
+  setSelectedType(selectedFrame || "");
+
+  onClose();
+};
 
   return (
     <AnimatePresence>
@@ -147,11 +196,18 @@ scrollbar-track-transparent
               Frame Inquiry
             </h2>
 
-            <form className="space-y-5">
+            <form
+  className="space-y-5"
+  onSubmit={handleSubmit}
+>
               <div>
                 <label className="block mb-2 font-medium">Full Name</label>
 
                 <input
+                type="text"
+  name="fullName"
+  value={formData.fullName}
+  onChange={handleChange}
                   placeholder="eg: Barry Allen"
                   className="
   w-full
@@ -182,6 +238,10 @@ scrollbar-track-transparent
                   <label className="block mb-2 font-medium">Phone Number</label>
 
                   <input
+                  type="text"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
                     placeholder="eg: 1234567890"
                     className="
   w-full
@@ -211,6 +271,10 @@ scrollbar-track-transparent
                   <label className="block mb-2 font-medium">Location</label>
 
                   <input
+                  type="text"
+  name="location"
+  value={formData.location}
+  onChange={handleChange}
                     placeholder="eg: Coimbatore"
                     className="
   w-full
@@ -397,6 +461,9 @@ scrollbar-track-transparent
                 </label>
 
                 <textarea
+                 name="details"
+  value={formData.details}
+  onChange={handleChange}
                   rows="5"
                   placeholder="Tell us more about frame requirements..."
                   className="
@@ -421,6 +488,7 @@ scrollbar-track-transparent
               </div>
 
               <button
+              type="submit"
                 className="
                   w-full
                   h-[56px]

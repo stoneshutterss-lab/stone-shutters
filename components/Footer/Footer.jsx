@@ -14,7 +14,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Baby Shoots", href: "/Baby-shoots" },
+  { name: "Baby Shoots", href: "/baby-shoot" },
   { name: "Frames", href: "/frames" },
   { name: "Contact", href: "/contact" },
 ];
@@ -105,7 +105,7 @@ gap-x-6 gap-y-4"
             {/* SOCIAL ICONS */}
             <div className="flex items-center gap-5">
               <Link
-                href="#"
+                href="https://wa.me/message/KPNB2HV2J5VGH1"
                 className="text-[#111111]
       hover:text-[#CE8123]
       transition-all duration-300"
@@ -114,7 +114,7 @@ gap-x-6 gap-y-4"
               </Link>
 
               <Link
-                href="#"
+                href="https://www.youtube.com/@stoneshutters"
                 className="text-[#111111]
       hover:text-[#CE8123]
       transition-all duration-300"
@@ -123,7 +123,7 @@ gap-x-6 gap-y-4"
               </Link>
 
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100064322580503"
                 className="text-[#111111]
       hover:text-[#CE8123]
       transition-all duration-300"
@@ -132,7 +132,7 @@ gap-x-6 gap-y-4"
               </Link>
 
               <Link
-                href="#"
+                href="https://www.instagram.com/stoneshutters_weddingstudioz?igsh=MWg1dWt2aHI2dWY0dg=="
                 className="text-[#111111]
       hover:text-[#CE8123]
       transition-all duration-300"

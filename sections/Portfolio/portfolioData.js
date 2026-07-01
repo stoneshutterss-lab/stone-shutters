@@ -26,7 +26,7 @@ const portfolioData = [
   },
   {
     id: 5,
-    title: "Baby Shower",
+    title: "Baby Shower and Maternity",
     image: "/portfolio/baby-shower.png",
     slug: "baby-shower",
   },
@@ -42,6 +42,12 @@ const portfolioData = [
     image: "/portfolio/birthday.png",
     slug: "birthday-shoot",
   },
+  {
+  id: 8,
+  title: "Modeling Photoshoot",
+  image: "/services/portrait.png",
+  slug: "modeling",
+},
 ];
 
 export default portfolioData;
