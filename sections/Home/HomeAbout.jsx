@@ -91,8 +91,8 @@ export default function HomeAbout() {
                 fontFamily: "Cormorant Garamond",
               }}
             >
-              Crafting Memories With{" "}
-              <span className="text-[#C28B36]">Passion & Art</span>
+              Every Love Story Deserves to Be{" "}
+              <span className="text-[#C28B36]">Remembered Forever</span>
             </h3>
 
             <p
@@ -107,12 +107,7 @@ export default function HomeAbout() {
                 fontFamily: "Poppins",
               }}
             >
-              Stone Shutters Wedding Studioz is more than a photography studio —
-              it's a space where memories transform into timeless visual art. We
-              specialize in wedding celebrations, candid storytelling, family
-              milestones, and emotional portraits that preserve every beautiful
-              chapter of life. With creativity, passion, and attention to
-              detail, we create photographs that families cherish forever.
+              At Stone Shutters Wedding Studioz, we capture more than photographs—we preserve emotions, love, and life's most cherished moments. From weddings and pre-wedding stories to newborns and family celebrations, every frame is crafted with creativity, passion, and elegance. Because years from now, your photos won't just show how you looked—they'll remind you how you felt.
             </p>
 
             <Link

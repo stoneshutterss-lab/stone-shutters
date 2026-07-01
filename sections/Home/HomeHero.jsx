@@ -21,7 +21,7 @@ export default function HomeHero() {
       setCurrent((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1,
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
@@ -93,8 +93,8 @@ export default function HomeHero() {
             className="
               mt-4
               text-white/90
-              text-sm
-              md:text-lg
+              text-[18px]
+              md:text-[24px]
               max-w-2xl
               mx-auto
             "

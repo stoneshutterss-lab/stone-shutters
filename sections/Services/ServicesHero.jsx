@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ServicesHero() {
   return (
@@ -11,7 +12,6 @@ export default function ServicesHero() {
         px-4 sm:px-6 lg:px-16 xl:px-20"
       >
         <div className="grid lg:grid-cols-2 gap-8 xl:gap-24 items-center">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -23,7 +23,6 @@ export default function ServicesHero() {
             }}
             className="will-change-transform"
           >
-
             {/* SMALL TITLE */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -70,7 +69,6 @@ export default function ServicesHero() {
               }}
             >
               Capturing Moments With
-
               <motion.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -100,7 +98,7 @@ export default function ServicesHero() {
                 duration: 0.75,
                 ease: "easeOut",
               }}
-              className="mt-4 text-[16px] sm:text-[17px]
+              className="mt-4 text-[18px] sm:text-[20px]
               leading-[2] text-[#444444]
               max-w-[620px]"
               style={{
@@ -108,43 +106,51 @@ export default function ServicesHero() {
                 fontWeight: 400,
               }}
             >
-              From weddings and baby shoots to cinematic storytelling and custom
-              frames, Stone Shutters Wedding Studioz creates timeless memories
-              filled with elegance, emotion, and artistic perfection.
+              From weddings and cinematic storytelling, Stone Shutters Wedding
+              Studioz creates timeless memories filled with elegance, emotion,
+              and artistic perfection.
             </motion.p>
 
             {/* BUTTON */}
-            <motion.button
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 0.35,
-                duration: 0.7,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                y: -3,
-                scale: 1.02,
-                boxShadow: "0px 12px 30px rgba(194,139,54,0.25)",
-              }}
-              whileTap={{
-                scale: 0.98,
-              }}
-              className="mt-8 bg-[#C28B36]
-              hover:bg-[#b57928]
-              text-white px-8 py-4
-              rounded-[6px]
-              text-[15px]
-              transition-colors duration-300
-              will-change-transform"
-              style={{
-                fontFamily: "Inter",
-                fontWeight: 500,
-              }}
-            >
-              Explore Our Projects →
-            </motion.button>
+            <Link href="/portfolio">
+              <motion.button
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 0.35,
+                  duration: 0.7,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  y: -3,
+                  scale: 1.02,
+                  boxShadow: "0px 12px 30px rgba(194,139,54,0.25)",
+                }}
+                whileTap={{
+                  scale: 0.98,
+                }}
+                className="
+      mt-8
+      bg-[#C28B36]
+      hover:bg-[#b57928]
+      text-white
+      px-8
+      py-4
+      rounded-[6px]
+      text-[15px]
+      transition-colors
+      duration-300
+      will-change-transform
+    "
+                style={{
+                  fontFamily: "Inter",
+                  fontWeight: 500,
+                }}
+              >
+                Explore Our Projects →
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* RIGHT IMAGE */}
@@ -169,7 +175,6 @@ export default function ServicesHero() {
               }}
               className="overflow-hidden rounded-[16px]"
             >
-
               <Image
                 src="/services/store.png"
                 alt="Stone Shutters"
@@ -182,7 +187,6 @@ export default function ServicesHero() {
               />
             </motion.div>
           </motion.div>
-
         </div>
       </div>
     </section>

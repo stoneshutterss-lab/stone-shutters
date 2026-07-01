@@ -293,13 +293,13 @@ duration-300
     rounded-[18px]
 
     px-5
-    py-7
+    py-6
 
     md:px-7
-    md:py-9
+    md:py-6
 
     lg:px-8
-    lg:py-15
+    lg:py-8
   "
           >
             {/* Heading */}
@@ -453,7 +453,7 @@ duration-300
 
               {/* Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Date */}
+                {/* StartDate */}
                 <div>
                   <label
                     className="
@@ -465,7 +465,7 @@ duration-300
                       font-['Poppins']
                     "
                   >
-                    Event Date
+                    Event start Date
                   </label>
 
                   <input
@@ -492,7 +492,7 @@ duration-300
                   />
                 </div>
 
-                {/* Location */}
+                {/* End Date */}
                 <div>
                   <label
                     className="
@@ -504,12 +504,12 @@ duration-300
                       font-['Poppins']
                     "
                   >
-                    Event Location
+                    Event End Date
                   </label>
 
                   <input
                     type="text"
-                    placeholder="eg : Coimbatore"
+                    placeholder="eg : 15/12/2003"
                     className="
                       w-full
                       h-[40px]
@@ -531,6 +531,47 @@ duration-300
                   />
                 </div>
               </div>
+
+              {/* Location */}
+              <div>
+                <label
+                  className="
+                    block
+                    text-[14px]
+                    font-medium
+                    text-[#444]
+                    mb-2
+                    font-['Poppins']
+                  "
+                >
+                  Location
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="eg : Coimbatore"
+                  className="
+                    w-full
+                    h-[40px]
+                    border
+                    border-[#e5e5e5]
+                    rounded-[6px]
+                    px-4
+                    text-[14px]
+                    outline-none
+                    bg-white
+                    font-['Inter']
+                    transition-all
+                    duration-300
+                    focus:border-[#C28B36]
+                    focus:shadow-[0_0_0_4px_rgba(194,139,54,0.08)]
+                    placeholder:text-[#9a9a9a]
+                    placeholder:text-[13px]
+                    placeholder:font-normal
+                  "
+                />
+              </div>
+
 
               {/* Service */}
               <div>

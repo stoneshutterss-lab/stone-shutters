@@ -99,7 +99,7 @@ gap-x-6 gap-y-4"
     tracking-[0.5px] text-[#111111]
     text-center sm:text-left"
             >
-              STONE SHUTTERS WEDDING STUDIO © 2026. All rights reserved.
+              STONE SHUTTERS WEDDING STUDIOZ © 2026. All rights reserved.
             </p>
 
             {/* SOCIAL ICONS */}

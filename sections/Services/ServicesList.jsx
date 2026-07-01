@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
       "Cinematic Wedding Films",
       "Engagement & Reception Shoots",
       "Pre-Wedding & Post-Wedding Sessions",
-      "Drone Photography & Videography",
+      "Drone shoots and LED Wall display",
     ],
   },
 
@@ -33,15 +34,27 @@ const services = [
       "Customized Props & Setups",
     ],
   },
-
   {
     id: "SERVICE 03",
+    title: "Barathanatiyam Artistic",
+    subtitle: "photography",
+    image: "/portfolio/Bharatanatyam.png",
+    points: [
+      "Salangai poojai",
+      "Arangetram (Rangapravesam)",
+      "Classical dance photo and video shoots",
+      "10+ Years of Expertise in This Field",
+    ],
+  },
+
+  {
+    id: "SERVICE 04",
     title: "Artistic Photography &",
     subtitle: "Creative Portraits",
     image: "/services/portrait.png",
     points: [
-      "Fashion & Portfolio Shoots",
-      "Traditional Portrait Photography",
+      "Fashion, modeling & Portfolio Shoots",
+      "Portrait Photography",
       "Couple & Lifestyle Shoots",
       "Artistic Indoor Sessions",
       "Creative Photo Editing",
@@ -50,15 +63,15 @@ const services = [
   },
 
   {
-    id: "SERVICE 04",
+    id: "SERVICE 05",
     title: "Premium Frames &",
     subtitle: "Album Designing",
     image: "/services/frame.png",
     points: [
-      "Custom Size Frames",
+      "Customized Size Frames",
       "Wedding Photo Frames",
-      "Baby Photo Frames",
-      "Premium Wall Frames",
+      "Baby and Family Photo Frames",
+      "Canvas, LED, Acrylic frames.",
       "Album Designing & Printing",
       "Personalized Gift Frames",
     ],
@@ -68,12 +81,10 @@ const services = [
 export default function ServicesList() {
   return (
     <section className="w-full pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
-
       <div
         className="max-w-[1600px] mx-auto
         px-4 sm:px-6 lg:px-16 xl:px-20"
       >
-
         {/* SECTION TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -85,9 +96,7 @@ export default function ServicesList() {
           }}
           className="text-center max-w-[900px] mx-auto"
         >
-
           <div className="flex items-center justify-center gap-4 mb-5">
-
             <div className="w-16 h-[1px] bg-[#C28B36]"></div>
 
             <p
@@ -127,17 +136,15 @@ export default function ServicesList() {
               fontWeight: 400,
             }}
           >
-            We blend creative photography, cinematic visuals,
-            and premium frame designs to preserve your most
-            special moments beautifully and meaningfully.
+            We blend creative photography, cinematic visuals, and premium frame
+            designs to preserve your most special moments beautifully and
+            meaningfully.
           </p>
         </motion.div>
 
         {/* SERVICES */}
         <div className="mt-10 lg:mt-20 space-y-10 lg:space-y-32">
-
           {services.map((service, index) => {
-
             const isReverse = index % 2 !== 0;
 
             return (
@@ -146,7 +153,6 @@ export default function ServicesList() {
                 className={`grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-15 items-center
                 ${isReverse ? "lg:[&>*:first-child]:order-2" : ""}`}
               >
-
                 {/* CONTENT */}
                 <motion.div
                   className={`
@@ -161,7 +167,6 @@ export default function ServicesList() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-
                   {/* SERVICE TAG */}
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -239,12 +244,8 @@ export default function ServicesList() {
                       fontFamily: "Inter",
                     }}
                   >
-
                     {service.points.map((point, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-3"
-                      >
+                      <li key={idx} className="flex items-start gap-3">
                         <span className="mt-[10px] w-[6px] h-[6px] rounded-full bg-[#111111]"></span>
 
                         <span>{point}</span>
@@ -253,27 +254,34 @@ export default function ServicesList() {
                   </motion.ul>
 
                   {/* LINK */}
-                  <motion.a
-                    whileHover={{
-                      x: 6,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 18,
-                    }}
-                    href="#"
-                    className="inline-block mt-8
-                    text-[#C28B36]
-                    underline underline-offset-4
-                    text-[16px] sm:text-[16px]
-                    lg:text-[20px]"
-                    style={{
-                      fontFamily: "Times New Roman",
-                    }}
-                  >
-                    Enquire about this service →
-                  </motion.a>
+                  <Link href="/contact">
+                    <motion.span
+                      whileHover={{
+                        x: 6,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 18,
+                      }}
+                      className="
+      inline-block
+      mt-8
+      text-[#C28B36]
+      underline
+      underline-offset-4
+      text-[16px]
+      sm:text-[16px]
+      lg:text-[20px]
+      cursor-pointer
+    "
+                      style={{
+                        fontFamily: "Times New Roman",
+                      }}
+                    >
+                      Enquire about this service →
+                    </motion.span>
+                  </Link>
                 </motion.div>
 
                 {/* IMAGE */}
@@ -290,7 +298,6 @@ export default function ServicesList() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-
                   <motion.div
                     whileHover={{
                       y: -6,
@@ -305,7 +312,6 @@ export default function ServicesList() {
                     will-change-transform
                     transform-gpu"
                   >
-
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -320,7 +326,6 @@ export default function ServicesList() {
                     />
                   </motion.div>
                 </motion.div>
-
               </div>
             );
           })}
