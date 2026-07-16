@@ -21,6 +21,7 @@ export default function NarthanaSection() {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
+            className="order-2 lg:order-1"
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -46,6 +47,7 @@ export default function NarthanaSection() {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
+            className="order-1 lg:order-2"
           >
 
             {/* SMALL TITLE */}
