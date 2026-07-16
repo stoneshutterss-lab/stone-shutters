@@ -120,15 +120,14 @@ ${formData.message}
   className="
     text-[#5c5c5c]
     text-[17px]
+    md:text-[16px]
     leading-[26px]
     font-['Inter']
   "
 >
-  21 Thiruvalluvar Nagar East 1st Street, 
-  <br/>
-  Opposite Nagamuthu Clinic, Kannagi Nagar 60 Feet Road, PN Road, 
-  <br/>
-  New Busstand,Tirupur-641602, Tamil Nadu
+  21 Thiruvalluvar Nagar East 1st Street, Opposite Nagamuthu Clinic,
+  Kannagi Nagar 60 Feet Road, PN Road, New Busstand,
+  Tirupur-641602, Tamil Nadu
 </p>
                 </div>
               </div>
