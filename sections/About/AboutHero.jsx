@@ -123,11 +123,7 @@ export default function AboutHero() {
               </p>
 
               <p>
-                Extending our passion for visual storytelling, Narthana Visuals is our dedicated creative space for Bharatanatyam photography and videography, capturing the grace of every movement, the depth of every expression, and the timeless beauty of classical dance through stunning photographs and cinematic films.
-              </p>
-
-              <p>
-                Through a seamless blend of modern photography techniques, cinematic storytelling, and artistic vision, we craft photographs and films that breathe with real emotion and authentic human connection. Our dedication to quality, creativity, and client satisfaction has made us one of the most preferred photography studios in Tamil Nadu.
+                Through a seamless blend of modern photography techniques, cinematic storytelling, and artistic vision, we craft photographs and films that breathe with real emotion and authentic human connection. Our dedication to quality, creativity, and client satisfaction has made us one of the most preferred wedding photography studios in Tamil Nadu.
               </p>
             </motion.div>
 
@@ -189,7 +185,7 @@ export default function AboutHero() {
                 height={900}
                 priority
                 loading="eager"
-                className="w-full h-[500px] sm:h-[620px] lg:h-[900px]
+                className="w-full h-[500px] sm:h-[620px] lg:h-[760px]
                 object-cover"
               />
             </motion.div>

@@ -74,7 +74,7 @@ ${formData.message}
   return (
     <section className="w-full bg-white py-8 md:py-10">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.72fr_1.15fr] gap-10 xl:gap-32 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 xl:gap-28 items-start">
           {/* LEFT SIDE */}
           <div className="w-full">
             <h1
@@ -117,17 +117,19 @@ ${formData.message}
                   </h3>
 
                   <p
-                    className="
-                      text-[#5c5c5c]
-                      text-[17px]
-                      leading-[26px]
-                      font-['Inter']
-                    "
-                  >
-                    21 Thiruvalluvar Nagar East 1st Street, Opposite Nagamuthu
-                    Clinic, Kannagi Nagar 60 Feet Road, PN Road, New Busstand,
-                    Tirupur-641602, Tamil Nadu
-                  </p>
+  className="
+    text-[#5c5c5c]
+    text-[16px]
+    leading-[26px]
+    font-['Inter']
+  "
+>
+  21 Thiruvalluvar Nagar East 1st Street, Opposite Nagamuthu Clinic,
+  <br />
+  Kannagi Nagar 60 Feet Road, PN Road, New Busstand,
+  <br />
+  Tirupur-641602, Tamil Nadu
+</p>
                 </div>
               </div>
 

@@ -72,7 +72,7 @@ export default function HomeSpecialties() {
                 fontFamily: "Poppins",
               }}
             >
-              Wedding photography, baby shoots, cinematic memories, and premium handcrafted frames.
+              Wedding photography, baby shoots, cinematic memories, and Premium frames.
             </p>
           </div>
 

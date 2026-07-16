@@ -40,7 +40,7 @@ const services = [
     subtitle: "photography",
     image: "/portfolio/Bharatanatyam.png",
     points: [
-      "Salangai poojai",
+      "Salangai pooja",
       "Arangetram (Rangapravesam)",
       "Classical dance photo and video shoots",
       "10+ Years of Expertise in This Field",

@@ -2,8 +2,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function PortfolioCTA() {
+  const router = useRouter();
   return (
     <section className="bg-white py-16 md:py-18">
       <div className="max-w-5xl mx-auto px-6 text-center">
@@ -40,6 +42,7 @@ export default function PortfolioCTA() {
         <motion.button
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
+           onClick={() => router.push("/contact")}
           className="
   mt-10
   px-8
