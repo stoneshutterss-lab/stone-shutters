@@ -4,12 +4,8 @@ import { useState } from "react";
 
 import { MapPin, Phone, Mail, ChevronDown } from "lucide-react";
 
-import {
-  FaWhatsapp,
-  FaInstagram,
-  FaFacebookF,
-  FaYoutube,
-} from "react-icons/fa";
+import Image from "next/image";
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaYoutube, FaHome } from "react-icons/fa";
 
 const ContactPage = () => {
   const [selectedService, setSelectedService] = useState("Select a service");
@@ -206,10 +202,10 @@ ${formData.message}
               </div>
             </div>
 
-            {/* Social */}
-            <div className="mt-9 mb-8">
-              <h4
-                className="
+            {/* FOLLOW US */}
+<div className="mt-8 mb-8">
+  <h4
+    className="
       text-[18px]
       tracking-[1px]
       font-medium
@@ -217,117 +213,203 @@ ${formData.message}
       font-['Poppins']
       mb-5
     "
-              >
-                FOLLOW US
-              </h4>
+  >
+    FOLLOW US
+  </h4>
 
-              <div className="flex items-center gap-4 flex-wrap">
-                {/* WhatsApp */}
-                <a
-                  href="https://wa.me/message/KPNB2HV2J5VGH1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="WhatsApp"
-                  className="
-        w-[46px]
-        h-[46px]
+  <div className="flex items-center gap-5">
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/message/KPNB2HV2J5VGH1"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      className="
+        relative
+        w-[56px]
+        h-[56px]
         rounded-full
+        bg-white
         flex
         items-center
         justify-center
-        bg-white
-        border
-        border-[#ececec]
-        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        shadow-[0_8px_22px_rgba(0,0,0,0.08)]
         transition-all
         duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        hover:-translate-y-1.5
+        hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
       "
-                >
-                  <FaWhatsapp className="text-[#25D366]" size={22} />
-                </a>
+    >
+      <FaWhatsapp
+        className="text-[#25D366]"
+        size={30}
+      />
+    </a>
 
-                {/* Instagram */}
-                <a
-                  href="https://www.instagram.com/stoneshutters_weddingstudioz?igsh=MWg1dWt2aHI2dWY0dg=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="
-        w-[46px]
-        h-[46px]
+    {/* Wedding Instagram */}
+    <a
+      href="https://www.instagram.com/stoneshutters_weddingstudioz?igsh=MWg1dWt2aHI2dWY0dg=="
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Wedding Instagram"
+      className="
+        relative
+        w-[56px]
+        h-[56px]
         rounded-full
+        bg-white
         flex
         items-center
         justify-center
-        bg-white
-        border
-        border-[#ececec]
-        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        shadow-[0_8px_22px_rgba(0,0,0,0.08)]
         transition-all
         duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        hover:-translate-y-1.5
+        hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
       "
-                >
-                  <FaInstagram className="text-[#E4405F]" size={20} />
-                </a>
+    >
+      <FaInstagram
+        className="text-[#E4405F]"
+        size={28}
+      />
 
-                {/* Facebook */}
-                <a
-                  href="https://www.facebook.com/profile.php?id=100064322580503"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="
-        w-[46px]
-        h-[46px]
+      <div
+        className="
+          absolute
+          -bottom-1
+          -right-1
+          w-6
+          h-6
+          rounded-full
+          bg-white
+          border-2
+          border-[#4A90E2]
+          flex
+          items-center
+          justify-center
+          shadow-md
+        "
+      >
+        <FaHome
+          size={11}
+          className="text-[#4A90E2]"
+        />
+      </div>
+    </a>
+
+    {/* Bharatanatyam Instagram */}
+    <a
+      href="https://www.instagram.com/narthanavisualsbyilakiyan?igsh=cWg4bXZpcGt6ZWw3"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Bharatanatyam Instagram"
+      className="
+        relative
+        w-[56px]
+        h-[56px]
         rounded-full
+        bg-white
         flex
         items-center
         justify-center
-        bg-white
-        border
-        border-[#ececec]
-        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        shadow-[0_8px_22px_rgba(0,0,0,0.08)]
         transition-all
         duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        hover:-translate-y-1.5
+        hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
       "
-                >
-                  <FaFacebookF className="text-[#1877F2]" size={18} />
-                </a>
+    >
+      <FaInstagram
+        className="text-[#E4405F]"
+        size={28}
+      />
 
-                {/* YouTube */}
-                <a
-                  href="https://www.youtube.com/@stoneshutters"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="
-        w-[46px]
-        h-[46px]
+      <div
+        className="
+          absolute
+          -bottom-1
+          -right-1
+          w-6
+          h-6
+          rounded-full
+          bg-white
+          border-2
+          border-[#E440A7]
+          flex
+          items-center
+          justify-center
+          shadow-md
+        "
+      >
+        <Image
+          src="/icons/bharatanatyam.png"
+          alt="Bharatanatyam"
+          width={11}
+          height={11}
+          className="object-contain"
+        />
+      </div>
+    </a>
+
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/profile.php?id=100064322580503"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+      className="
+        relative
+        w-[56px]
+        h-[56px]
         rounded-full
+        bg-white
         flex
         items-center
         justify-center
-        bg-white
-        border
-        border-[#ececec]
-        shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+        shadow-[0_8px_22px_rgba(0,0,0,0.08)]
         transition-all
         duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]
+        hover:-translate-y-1.5
+        hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
       "
-                >
-                  <FaYoutube className="text-[#FF0000]" size={22} />
-                </a>
-              </div>
-            </div>
+    >
+      <FaFacebookF
+        className="text-[#1877F2]"
+        size={26}
+      />
+    </a>
 
+    {/* YouTube */}
+    <a
+      href="https://www.youtube.com/@stoneshutters"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+      className="
+        relative
+        w-[56px]
+        h-[56px]
+        rounded-full
+        bg-white
+        flex
+        items-center
+        justify-center
+        shadow-[0_8px_22px_rgba(0,0,0,0.08)]
+        transition-all
+        duration-300
+        hover:-translate-y-1.5
+        hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]
+      "
+    >
+      <FaYoutube
+        className="text-[#FF0000]"
+        size={30}
+      />
+    </a>
+
+  </div>
+</div>
             {/* Map */}
             <div
               className="
