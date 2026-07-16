@@ -125,9 +125,7 @@ ${formData.message}
   "
 >
   21 Thiruvalluvar Nagar East 1st Street, Opposite Nagamuthu Clinic,
-  <br />
   Kannagi Nagar 60 Feet Road, PN Road, New Busstand,
-  <br />
   Tirupur-641602, Tamil Nadu
 </p>
                 </div>
