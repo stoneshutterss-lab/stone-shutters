@@ -119,7 +119,8 @@ ${formData.message}
                   <p
   className="
     text-[#5c5c5c]
-    text-[16px]
+    text-[17px]
+    md:text-[16px]
     leading-[26px]
     font-['Inter']
   "
