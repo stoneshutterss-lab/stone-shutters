@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 
 export const homeGalleryQuery = groq`
 {
-  "portfolio": *[_type == "project"]{
+  "portfolio": *[_type=="project"] | order(publishedAt desc){
     _id,
     projectName,
     category,
@@ -10,7 +10,7 @@ export const homeGalleryQuery = groq`
     galleryImages
   },
 
-  "babyShoots": *[_type == "babyProject"]{
+  "babyShoots": *[_type=="babyProject"] | order(publishedAt desc){
     _id,
     childName,
     "slug": slug.current,

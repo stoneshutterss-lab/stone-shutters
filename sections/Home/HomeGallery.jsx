@@ -5,7 +5,13 @@ import { client } from "@/sanity/lib/client";
 import { homeGalleryQuery } from "@/sanity/lib/homeQueries";
 
 export default async function HomeGallery() {
-  const data = await client.fetch(homeGalleryQuery);
+  const data = await client.fetch(
+  homeGalleryQuery,
+  {},
+  {
+    cache: "no-store",
+  }
+);
 
   // Portfolio Images
   const portfolioImages =
