@@ -23,7 +23,7 @@ export default function FounderSection() {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2"
+            className="order-2"
           >
 
             <motion.div
@@ -54,7 +54,7 @@ export default function FounderSection() {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="order-2 lg:order-1"
+            className="order-1"
           >
 
             {/* SMALL TITLE */}
