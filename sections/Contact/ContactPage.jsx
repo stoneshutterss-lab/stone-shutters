@@ -428,7 +428,7 @@ ${formData.message}
             >
               <iframe
                 title="Stone Shutters Wedding Studioz Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7790927426!2d77.34247307772803!3d11.129823560784798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907e66975fe49%3A0xa66c58d8ff1c20d5!2sSTONE%20SHUTTERS%20WEDDING%20STUDIOZ%20-%20best%20candid%20photography%20studio!5e0!3m2!1sen!2sin!4v1782906002271!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.77909236276!2d77.34476907481029!3d11.129823589041228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907e66975fe49%3A0xa66c58d8ff1c20d5!2sStone%20Shutters%20Wedding%20Studioz!5e0!3m2!1sen!2sin!4v1784205207324!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
