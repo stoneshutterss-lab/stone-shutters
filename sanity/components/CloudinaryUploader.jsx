@@ -35,10 +35,13 @@ const uploadSingle = async (file) => {
 
   formData.append("file", file);
 
-  const response = await fetch("/api/cloudinary/upload", {
-  method: "POST",
-  body: formData,
-});
+  const response = await fetch(
+  `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
+  {
+    method: "POST",
+    body: formData,
+  }
+);
 
 
 const text = await response.text();
