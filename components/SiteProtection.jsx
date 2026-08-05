@@ -18,7 +18,7 @@ export default function SiteProtection() {
 
     // Disable Keyboard Shortcuts
     const handleKeyDown = (e) => {
-      const key = e.key.toLowerCase();
+      const key = e.key?.toLowerCase() || "";
 
       // F12
       if (e.key === "F12") {
