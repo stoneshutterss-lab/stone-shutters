@@ -2,26 +2,13 @@
 
 import Image from "next/image";
 
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
 import CategoryGallery from "@/sections/Portfolio/CategoryGallery";
-
-const query = `
-*[_type == "babyProject" && slug.current == $slug][0]{
-  _id,
-  childName,
-  tagLine,
-  coverImage,
-  galleryImages
-}
-`;
+import { getBabyProjectBySlug } from "@/lib/data";
 
 export default async function BabyShootDetailsPage({ params }) {
   const { slug } = await params;
 
-  const project = await client.fetch(query, {
-    slug,
-  });
+  const project = await getBabyProjectBySlug(slug);
 
   if (!project) {
     return (
@@ -37,11 +24,7 @@ export default async function BabyShootDetailsPage({ params }) {
 
       <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
         <Image
-          src={urlFor(project.coverImage)
-  .width(1800)
-  .height(1000)
-  .fit("crop")
-  .url()}
+          src={project.coverImage || "/category-pages/baby-shower-hero.png"}
           alt={project.childName}
           fill
           priority

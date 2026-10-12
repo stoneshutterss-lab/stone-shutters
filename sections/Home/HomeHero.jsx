@@ -86,7 +86,7 @@ export default function HomeHero() {
               fontWeight: 400,
             }}
           >
-            We Don't Just Capture Moments
+            We Don&apos;t Just Capture Moments
           </h1>
 
           <p

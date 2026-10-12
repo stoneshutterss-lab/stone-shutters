@@ -4,8 +4,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { urlFor } from "@/sanity/lib/image";
-
 export default function PortfolioProjectGrid({ projects, category }) {
   return (
     <section className="pb-8 md:pb-12">
@@ -28,14 +26,10 @@ export default function PortfolioProjectGrid({ projects, category }) {
               {/* Cover Image */}
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src={urlFor(project.coverImage)
-                    .width(800)
-                    .height(1000)
-                    .fit("crop")
-                    .url()}
+                  src={project.coverImage || "/category-pages/wedding-hero.png"}
                   alt={project.projectName}
                   fill
-                  quality={100}
+                  quality={95}
                   sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

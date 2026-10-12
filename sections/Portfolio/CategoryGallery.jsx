@@ -32,6 +32,7 @@ export default function CategoryGallery({ images }) {
             "
             onClick={() => setIndex(i)}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={image}
               alt=""

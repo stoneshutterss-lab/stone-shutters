@@ -11,19 +11,19 @@ import FloatingContact from "@/components/FloatingContact/FloatingContact";
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
-  const isStudio = pathname.startsWith("/studio");
+  const isAdmin = pathname.startsWith("/stoneadm") || pathname.startsWith("/studio");
 
   return (
     <>
-      {!isStudio && <Navbar />}
+      {!isAdmin && <Navbar />}
 
-      <main className={isStudio ? "" : "flex-1 pt-[64px] lg:pt-[72px]"}>
+      <main className={isAdmin ? "" : "flex-1 pt-[64px] lg:pt-[72px]"}>
         {children}
       </main>
 
-      {!isStudio && <FloatingContact />}
+      {!isAdmin && <FloatingContact />}
 
-      {!isStudio && <Footer />}
+      {!isAdmin && <Footer />}
     </>
   );
 }

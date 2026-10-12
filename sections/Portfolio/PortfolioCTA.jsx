@@ -15,7 +15,7 @@ export default function PortfolioCTA() {
           viewport={{ once: true }}
           className="uppercase tracking-[0.35em] text-[#C28B36] text-sm"
         >
-          Let's Create Something Beautiful
+          Let&apos;s Create Something Beautiful
         </motion.span>
 
         <motion.h2
@@ -36,7 +36,7 @@ export default function PortfolioCTA() {
           className="mt-6 text-[#666] text-lg leading-relaxed max-w-2xl mx-auto"
         >
           From intimate moments to grand celebrations, we transform memories
-          into timeless photographs you'll cherish forever.
+          into timeless photographs you&apos;ll cherish forever.
         </motion.p>
 
         <motion.button

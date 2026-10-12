@@ -1,17 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { client } from "@/sanity/lib/client";
-import { homeGalleryQuery } from "@/sanity/lib/homeQueries";
+import { getHomeGalleryData } from "@/lib/data";
 
 export default async function HomeGallery() {
-  const data = await client.fetch(
-  homeGalleryQuery,
-  {},
-  {
-    cache: "no-store",
-  }
-);
+  const data = await getHomeGalleryData();
 
   // Portfolio Images
   const portfolioImages =
@@ -33,19 +26,7 @@ export default async function HomeGallery() {
       }))
     ) || [];
 
-  // More Portfolio Images
-  const selectedPortfolio = [...portfolioImages]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 12);
-
-  // Fewer Baby Shoot Images
-  const selectedBaby = [...babyImages]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 8);
-
-  const galleryImages = [...selectedPortfolio, ...selectedBaby].sort(
-    () => Math.random() - 0.5
-  );
+  const galleryImages = [...portfolioImages.slice(0, 12), ...babyImages.slice(0, 8)];
 
   return (
     <section className="bg-white py-8 md:py-12">

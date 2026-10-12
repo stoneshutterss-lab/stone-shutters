@@ -1,18 +1,19 @@
 //src/app/portfolio/[category]/page.js
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
+import { notFound } from "next/navigation";
 import categoryData from "@/sections/Portfolio/categoryData";
 import PortfolioProjectGrid from "@/sections/Portfolio/PortfolioProjectGrid";
-import { categoryImagesQuery } from "@/sanity/lib/queries";
+import { getProjectsByCategory } from "@/lib/data";
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;
 
   const pageData = categoryData[category];
+  if (!pageData) {
+    notFound();
+  }
 
-  const projects = await client.fetch(categoryImagesQuery, {
-  category,
-});
+  const projects = await getProjectsByCategory(category);
 
   
 

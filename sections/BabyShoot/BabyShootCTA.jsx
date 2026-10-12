@@ -12,7 +12,7 @@ export default function BabyShootCTA() {
             fontFamily: "Poppins",
           }}
         >
-          Let's Create Memories
+          Let&apos;s Create Memories
         </span>
 
         <h2

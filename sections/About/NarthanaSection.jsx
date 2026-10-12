@@ -100,7 +100,7 @@ export default function NarthanaSection() {
               </p>
 
               <p>
-                Led by Ramesh D. Ilakiyan is dedicated to transforming Bharatanatyam and Arangetram performances into enduring works of art. With a deep appreciation for Indian classical dance and a passion for cinematic photography, we create premium visual memories that honor every dancer's journey. Each image is thoughtfully composed to capture not just a performance, but a legacy that will be treasured for generations.
+                Led by Ramesh D. Ilakiyan is dedicated to transforming Bharatanatyam and Arangetram performances into enduring works of art. With a deep appreciation for Indian classical dance and a passion for cinematic photography, we create premium visual memories that honor every dancer&apos;s journey. Each image is thoughtfully composed to capture not just a performance, but a legacy that will be treasured for generations.
               </p>
             </div>
 

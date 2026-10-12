@@ -38,7 +38,7 @@ export default function PortfolioHero() {
 
             <p className="mt-6 text-[#555] leading-relaxed text-lg md:text-xl">
               Explore our collections and experience the moments that define
-              love, family, and life's most beautiful milestones.
+              love, family, and life&apos;s most beautiful milestones.
             </p>
           </motion.div>
         </div>

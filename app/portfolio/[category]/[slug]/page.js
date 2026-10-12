@@ -1,22 +1,7 @@
 //src/app/portfolio/[category]/[slug]/page.js
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
 import CategoryGallery from "@/sections/Portfolio/CategoryGallery";
-import { urlFor } from "@/sanity/lib/image";
-
-const query = `
-*[
-  _type == "project" &&
-  category == $category &&
-  slug.current == $slug
-][0]{
-  _id,
-  projectName,
-  tagLine,
-  coverImage,
-  galleryImages
-}
-`;
+import { getProjectBySlug } from "@/lib/data";
 
 const categoryTitles = {
   wedding: {
@@ -65,10 +50,7 @@ export default async function ProjectPage({ params }) {
     heading: "Moments of",
   };
 
-  const project = await client.fetch(query, {
-    category,
-    slug,
-  });
+  const project = await getProjectBySlug(category, slug);
 
   if (!project) {
     return (
@@ -89,15 +71,7 @@ export default async function ProjectPage({ params }) {
 
       <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
         <Image
-  src={
-    project.coverImage
-      ? urlFor(project.coverImage)
-          .width(1800)
-          .height(1000)
-          .fit("crop")
-          .url()
-      : "/portfolio/default-cover.jpg"
-  }
+          src={project.coverImage || "/category-pages/wedding-hero.png"}
           alt={project.projectName}
           fill
           priority

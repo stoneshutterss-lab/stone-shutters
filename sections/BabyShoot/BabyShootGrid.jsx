@@ -2,21 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
-
-const query = `
-*[_type == "babyProject"] | order(publishedAt desc){
-  _id,
-  childName,
-  tagLine,
-  "slug": slug.current,
-  coverImage
-}
-`;
+import { getBabyProjects } from "@/lib/data";
 
 export default async function BabyShootGrid() {
-  const projects = await client.fetch(query);
+  const projects = await getBabyProjects();
 
   return (
     <section className="bg-white py-6 md:py-10">
@@ -35,7 +24,7 @@ export default async function BabyShootGrid() {
 
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
-                    src={urlFor(project.coverImage).width(800).url()}
+                    src={project.coverImage || "/category-pages/baby-shower-hero.png"}
                     alt={project.childName}
                     fill
                     className="

@@ -38,22 +38,23 @@ const handleChange = (e) => {
   });
 };
 
-  useEffect(() => {
+  const [prevSelectedFrame, setPrevSelectedFrame] = useState(selectedFrame);
+  if (selectedFrame !== prevSelectedFrame) {
+    setPrevSelectedFrame(selectedFrame);
     setSelectedType(selectedFrame || "");
-  }, [selectedFrame]);
-
-  useEffect(() => {
-  if (isOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-    setIsDropdownOpen(false);
   }
 
-  return () => {
-    document.body.style.overflow = "auto";
-  };
-}, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const handleSubmit = (e) => {
   e.preventDefault();

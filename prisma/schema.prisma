@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id            String         @id @default(cuid())
+  projectName   String
+  tagLine       String?
+  slug          String         @unique
+  category      String
+  coverImage    String
+  coverPublicId String?
+  order         Int            @default(0)
+  publishedAt   DateTime       @default(now())
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  images        ProjectImage[]
+}
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  url       String
+  publicId  String?
+  order     Int      @default(0)
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model BabyProject {
+  id            String             @id @default(cuid())
+  childName     String
+  tagLine       String?
+  slug          String             @unique
+  coverImage    String
+  coverPublicId String?
+  order         Int                @default(0)
+  publishedAt   DateTime           @default(now())
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+  images        BabyProjectImage[]
+}
+
+model BabyProjectImage {
+  id            String      @id @default(cuid())
+  url           String
+  publicId      String?
+  order         Int         @default(0)
+  babyProjectId String
+  babyProject   BabyProject @relation(fields: [babyProjectId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
+}

@@ -107,7 +107,7 @@ export default function HomeAbout() {
                 fontFamily: "Poppins",
               }}
             >
-              At Stone Shutters Wedding Studioz, we capture more than photographs—we preserve emotions, love, and life's most cherished moments. From weddings and pre-wedding stories to newborns and family celebrations, every frame is crafted with creativity, passion, and elegance. Because years from now, your photos won't just show how you looked—they'll remind you how you felt.
+              At Stone Shutters Wedding Studioz, we capture more than photographs—we preserve emotions, love, and life&apos;s most cherished moments. From weddings and pre-wedding stories to newborns and family celebrations, every frame is crafted with creativity, passion, and elegance. Because years from now, your photos won&apos;t just show how you looked—they&apos;ll remind you how you felt.
             </p>
 
             <Link
