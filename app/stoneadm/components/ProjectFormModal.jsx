@@ -391,11 +391,7 @@ export default function ProjectFormModal({
                 required
                 value={name}
                 onChange={handleNameChange}
-                placeholder={
-                  projectType === "project"
-                    ? "e.g. Rahul & Sneha's Wedding"
-                    : "e.g. Baby Aarav"
-                }
+                placeholder=""
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#c28b36] focus:ring-1 focus:ring-[#c28b36]"
               />
             </div>
@@ -408,7 +404,7 @@ export default function ProjectFormModal({
                 type="text"
                 value={tagLine}
                 onChange={(e) => setTagLine(e.target.value)}
-                placeholder="e.g. A Magical Royal Wedding in Chennai"
+                placeholder=""
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#c28b36] focus:ring-1 focus:ring-[#c28b36]"
               />
             </div>
@@ -422,7 +418,7 @@ export default function ProjectFormModal({
                 required
                 value={slug}
                 onChange={(e) => setSlug(slugify(e.target.value))}
-                placeholder="e.g. rahul-and-sneha"
+                placeholder=""
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#c28b36] focus:ring-1 focus:ring-[#c28b36]"
               />
             </div>
@@ -448,22 +444,18 @@ export default function ProjectFormModal({
             )}
           </div>
 
-          {/* Upload Section with Smart Compressor */}
+          {/* Upload Section */}
           <div className="pt-2">
             <div className="flex items-center justify-between mb-2">
               <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700">
                 Gallery Images & Cover Selector ({images.length} photos)
               </label>
-              <span className="text-[11px] text-[#c28b36] flex items-center gap-1 font-semibold">
-                <Sparkles className="w-3.5 h-3.5" />
-                Auto-Compressor (50MB → 1MB)
-              </span>
             </div>
 
             {/* Dropzone Box */}
             <div
               onClick={() => fileInputRef.current?.click()}
-              className="border-2 border-dashed border-slate-300 hover:border-[#c28b36] rounded-2xl p-6 text-center cursor-pointer bg-slate-50 hover:bg-slate-100/60 transition-all group"
+              className="border-2 border-dashed border-slate-300 hover:border-[#c28b36] rounded-2xl p-6 text-center cursor-pointer bg-slate-50 hover:bg-slate-100/60 transition-all group flex flex-col items-center justify-center"
             >
               <input
                 ref={fileInputRef}
@@ -474,16 +466,8 @@ export default function ProjectFormModal({
                 className="hidden"
                 disabled={isProcessing}
               />
-              <div className="flex flex-col items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-[#c28b36]/10 text-[#c28b36] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <UploadCloud className="w-6 h-6" />
-                </div>
-                <p className="text-sm font-semibold text-slate-800 mb-1">
-                  Click to select multiple photos or drag & drop here
-                </p>
-                <p className="text-xs text-slate-500 max-w-md">
-                  Large raw camera exports (30MB – 50MB) are automatically compressed client-side to ~1MB high-res WebP/JPEG before uploading.
-                </p>
+              <div className="w-12 h-12 rounded-full bg-[#c28b36]/10 text-[#c28b36] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <UploadCloud className="w-6 h-6" />
               </div>
             </div>
 

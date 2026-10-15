@@ -86,7 +86,7 @@ export default function AdminLogin({ onLoginSuccess }) {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="stoneshutterss@gmail.com"
+                placeholder=""
                 className="w-full bg-slate-50/70 border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#c28b36] focus:ring-2 focus:ring-[#c28b36]/20 transition-all"
               />
             </div>
@@ -103,7 +103,7 @@ export default function AdminLogin({ onLoginSuccess }) {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
+                placeholder=""
                 className="w-full bg-slate-50/70 border border-slate-200 rounded-xl py-2.5 pl-10 pr-10 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#c28b36] focus:ring-2 focus:ring-[#c28b36]/20 transition-all"
               />
               <button

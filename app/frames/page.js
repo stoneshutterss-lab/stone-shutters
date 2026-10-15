@@ -10,18 +10,22 @@ import FrameInquiryModal from "@/sections/Frames/FrameInquiryModal";
 
 export default function FramesPage() {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
   const [selectedFrame, setSelectedFrame] = useState("");
+  const [availableFrames, setAvailableFrames] = useState([]);
 
   const openInquiry = (frameName = "") => {
     setSelectedFrame(frameName);
     setIsInquiryOpen(true);
   };
+
   return (
     <>
       <FramesHero />
 
-      <FramesGrid onOpenInquiry={openInquiry} />
+      <FramesGrid
+        onOpenInquiry={openInquiry}
+        onFramesLoaded={setAvailableFrames}
+      />
 
       <CustomFramesCTA onOpenInquiry={openInquiry} />
 
@@ -29,6 +33,7 @@ export default function FramesPage() {
         isOpen={isInquiryOpen}
         onClose={() => setIsInquiryOpen(false)}
         selectedFrame={selectedFrame}
+        availableFrames={availableFrames}
       />
     </>
   );

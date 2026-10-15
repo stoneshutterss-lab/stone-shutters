@@ -5,20 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export default function FrameInquiryModal({ isOpen, onClose, selectedFrame }) {
+export default function FrameInquiryModal({
+  isOpen,
+  onClose,
+  selectedFrame,
+  availableFrames = [],
+}) {
   const frameOptions = [
-    "Frame (6×4 inch)",
-    "Frame (8×6 inch)",
-    "Frame (10×15 inch)",
-    "Frame (12×8 inch)",
-    "Frame (12×10 inch)",
-    "Frame (12×15 inch)",
-    "Frame (12×18 inch)",
-    "Frame (20×16 inch)",
-    "Frame (24×16 inch)",
-    "Frame (20×30 inch)",
-    "Frame (30×40 inch)",
-    "Custom Size Frame",
+    ...new Set([
+      ...availableFrames.map((f) => (typeof f === "string" ? f : f.title)),
+      ...(selectedFrame ? [selectedFrame] : []),
+      "Custom Size Frame",
+    ]),
   ];
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
